@@ -1,6 +1,8 @@
 <?php
 
-use Illuminate\Http\Request;
+use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\OrderDetailsController;
+use App\Models\OrderDetails;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,6 +16,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+//customers route
+Route::get("customers",[CustomerController::class,"index"]);
+Route::post("customers",[CustomerController::class,"create"]);
+
+//order details route
+Route::get("order_details",[OrderDetailsController::class,"index"]);
+Route::post("order_details",[OrderDetailsController::class,"create"]);
