@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\OrderDetailsController;
+use App\Http\Controllers\OrdersController;
+use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\SuppliersController;
 use App\Models\OrderDetails;
 use Illuminate\Support\Facades\Route;
@@ -21,6 +23,10 @@ use Illuminate\Support\Facades\Route;
 Route::get("customers",[CustomerController::class,"index"]);
 Route::post("customers",[CustomerController::class,"create"]);
 
+//orders route
+Route::get("orders",[OrdersController::class,"index"]);
+Route::post("orders",[OrdersController::class,"create"]);
+
 //order details route
 Route::get("order_details",[OrderDetailsController::class,"index"]);
 Route::post("order_details",[OrderDetailsController::class,"create"]);
@@ -28,3 +34,7 @@ Route::post("order_details",[OrderDetailsController::class,"create"]);
 //suppliers route
 Route::get("suppliers",[SuppliersController::class,"index"]);
 Route::post("suppliers",[SuppliersController::class,"create"]);
+
+//products route
+Route::get("products",[ProductsController::class,"index"]);
+Route::post("products",[ProductsController::class,"create"]);

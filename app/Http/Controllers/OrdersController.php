@@ -2,21 +2,22 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\OrderDetails;
+use App\Models\Orders;
 use Illuminate\Http\Request;
 
-class OrderDetailsController extends Controller
+class OrdersController extends Controller
 {
     public function index(){
-        $orderDetails = OrderDetails::all();
-        return response()->json($orderDetails);
+        $orders = Orders::all();
+        return response()->json($orders);
     }
 
     public function create (Request $request){
-        $orderDetails = OrderDetails::create([
+        $orders = Orders::create([
             "brand"=>$request->input("brand"),
             "model"=>$request->input("model"),
             "serial_number"=>$request->input("serial_number"),
+            "suplier"=>$request->input("suplier"),
             "type"=>$request->input("type"),
             "unit_price"=>$request->input("unit_price"),
             "quantity"=>$request->input("quantity"),
@@ -25,9 +26,6 @@ class OrderDetailsController extends Controller
             "shipped_date"=>$request->input("shipped_date"),
         ]);
 
-        // Calculate the total price
-        //$orderDetails->total_price = $orderDetails->unit_price * $orderDetails->quantity;
-
-        return response()->json($orderDetails, 201);
+        return response()->json($orders, 201);
     }
 }

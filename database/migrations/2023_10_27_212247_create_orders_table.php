@@ -11,11 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('order_details', function (Blueprint $table) {
+        Schema::create('orders', function (Blueprint $table) {
             $table->id();
             $table->string("brand");
             $table->string("model");
             $table->string("serial_number")->unique();
+            $table->string("suplier");
             $table->string("type"); //Electronic or Lighting
             $table->decimal("unit_price");
             $table->integer("quantity");
@@ -31,6 +32,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('order_details');
+        Schema::dropIfExists('orders');
     }
 };
