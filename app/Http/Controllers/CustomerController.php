@@ -7,13 +7,15 @@ use Illuminate\Http\Request;
 
 class CustomerController extends Controller
 {
-    Public function index(){
+    public function index()
+    {
         $customer = Customer::all();
         return response()->json($customer);
     }
 
     public function create (Request $request){
         $customer = Customer::create([
+            "CustomerID"=>$request->input("CustomerID"),
             "name"=>$request->input("name"),
             "phone"=>$request->input("phone"),
             "email"=>$request->input("email"),
@@ -23,4 +25,16 @@ class CustomerController extends Controller
         ]);
         return response()->json($customer, 201);
     }
+
+    public function show($id)
+    {
+        // Logic to show a specific customer
+    }
+
+    public function update(Request $request, $id)
+    {
+        // Logic to update a specific customer
+    }
+
 }
+

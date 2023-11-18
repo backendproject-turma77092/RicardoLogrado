@@ -1,9 +1,12 @@
 <?php
 
 use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\OrderController;
 use App\Http\Controllers\OrderDetailsController;
 use App\Http\Controllers\OrdersController;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProductsController;
+use App\Http\Controllers\SupplierController;
 use App\Http\Controllers\SuppliersController;
 use App\Models\OrderDetails;
 use Illuminate\Support\Facades\Route;
@@ -20,21 +23,17 @@ use Illuminate\Support\Facades\Route;
 */
 
 //customers route
-Route::get("customers",[CustomerController::class,"index"]);
-Route::post("customers",[CustomerController::class,"create"]);
+Route::get("customer",[CustomerController::class,"index"]);
+Route::post("customer",[CustomerController::class,"create"]);
 
 //orders route
-Route::get("orders",[OrdersController::class,"index"]);
-Route::post("orders",[OrdersController::class,"create"]);
-
-//order details route
-Route::get("order_details",[OrderDetailsController::class,"index"]);
-Route::post("order_details",[OrderDetailsController::class,"create"]);
+Route::get("order",[OrderController::class,"index"]);
+Route::post("order",[OrderController::class,"create"]);
 
 //suppliers route
-Route::get("suppliers",[SuppliersController::class,"index"]);
-Route::post("suppliers",[SuppliersController::class,"create"]);
+Route::get("supplier",[SupplierController::class,"index"]);
+Route::post("supplier",[SupplierController::class,"create"]);
 
 //products route
-Route::get("products",[ProductsController::class,"index"]);
-Route::post("products",[ProductsController::class,"create"]);
+Route::get("product",[ProductController::class,"index"]);
+Route::post("product",[ProductController::class,"create"]);

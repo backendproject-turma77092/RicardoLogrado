@@ -5,25 +5,26 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Customer extends Model
+class Supplier extends Model
 {
     use HasFactory;
-    protected $primaryKey = 'CustomerID';
+    protected $primaryKey = 'SupplierID';
     public $incrementing = false;
-    protected $keyType = 'string';
+    protected $keyType = 'int';
 
     protected $fillable = [
-        'CustomerID',
-        'name',
+        'SupplierID',
+        'company_name',
         'phone',
         'email',
         'address',
         'postal_code',
+        'type',
         'NIF'
     ];
 
-    public function orders()
+    public function products()
     {
-        return $this->hasMany(Order::class, 'customer_CustomerID');
+        return $this->belongsToMany(Product::class, 'product_supplier', 'supplier_SupplierID', 'product_ProductID');
     }
 }
