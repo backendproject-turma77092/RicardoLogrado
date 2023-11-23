@@ -6,11 +6,11 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-
     public function up(): void
     {
+        Schema::dropIfExists('suppliers');
         Schema::create('suppliers', function (Blueprint $table) {
-            $table->string('SupplierID')->primary();
+            $table->id();
             $table->string('company_name', 50);
             $table->string('phone', 24);
             $table->string('email', 50);
@@ -20,7 +20,6 @@ return new class extends Migration
             $table->string('NIF', 9);
             $table->timestamps();
         });
-        
     }
 
     public function down(): void

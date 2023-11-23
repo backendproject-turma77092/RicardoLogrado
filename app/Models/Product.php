@@ -21,6 +21,11 @@ class Product extends Model
         'discontinued',
     ];
 
+    public function suppliers()
+    {
+        return $this->belongsToMany(Supplier::class, 'product_supplier', 'ProductID', 'SupplierID');
+    }
+
     public function orderProducts()
     {
         return $this->hasMany(OrderProduct::class, 'ProductID');

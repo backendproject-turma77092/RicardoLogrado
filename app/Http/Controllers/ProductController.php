@@ -30,12 +30,12 @@ class ProductController extends Controller
 
     public function show($id)
     {
-        // Logic to show a specific product
+        
     }
 
     public function update(Request $request, $id)
     {
-        // Logic to update a specific product
+        
     }
 
 }
