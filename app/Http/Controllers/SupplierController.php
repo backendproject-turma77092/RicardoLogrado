@@ -14,7 +14,6 @@ class SupplierController extends Controller
 
     public function create (Request $request){
         $supplier = Supplier::create([
-            "SupplierID"=>$request->input("SupplierID"),
             "company_name"=>$request->input("company_name"),
             "phone"=>$request->input("phone"),
             "email"=>$request->input("email"),

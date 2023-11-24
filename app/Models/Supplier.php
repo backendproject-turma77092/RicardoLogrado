@@ -13,7 +13,6 @@ class Supplier extends Model
     protected $keyType = 'int';
 
     protected $fillable = [
-        'SupplierID',
         'company_name',
         'phone',
         'email',
