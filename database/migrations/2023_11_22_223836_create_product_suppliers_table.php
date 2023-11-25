@@ -8,12 +8,19 @@ return new class extends Migration
 {
     public function up(): void
     {
+        // Schema::dropIfExists('product_supplier');
+        // Schema::create('product_supplier', function (Blueprint $table) {
+        //     $table->foreignId('ProductID')->constrained('products');
+        //     $table->foreignId('SupplierID')->constrained('suppliers');
+        //     $table->timestamps();
+        // });
         Schema::dropIfExists('product_supplier');
         Schema::create('product_supplier', function (Blueprint $table) {
-            $table->foreignId('ProductID')->constrained('products');
-            $table->foreignId('SupplierID')->constrained('suppliers');
+            $table->foreignId('product_id')->constrained();
+            $table->foreignId('supplier_id')->constrained();
             $table->timestamps();
         });
+        
     }
 
     public function down(): void

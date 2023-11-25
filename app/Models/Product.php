@@ -14,7 +14,6 @@ class Product extends Model
         'model',
         'serial_number',
         'type',
-        'supplier',
         'unit_price',
         'units_in_stock',
         'units_on_order',
@@ -23,8 +22,9 @@ class Product extends Model
 
     public function suppliers()
     {
-        return $this->belongsToMany(Supplier::class, 'product_supplier', 'ProductID', 'SupplierID');
+        return $this->belongsToMany(Supplier::class, 'product_supplier', 'product_id', 'supplier_id');
     }
+
 
     public function orderProducts()
     {

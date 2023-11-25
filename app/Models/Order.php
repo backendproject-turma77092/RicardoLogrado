@@ -20,4 +20,15 @@ class Order extends Model
     {
         return $this->hasMany(OrderProduct::class, 'OrderID');
     }
+
+    public function getTotalPriceAttribute()
+    {
+        return $this->orderProducts->sum(function ($orderProduct) {
+            if (!isset($orderProduct->product)) {
+                $orderProduct->load('product');
+            }
+
+            return $orderProduct->quantity * $orderProduct->product->unit_price;
+        });
+    }
 }
