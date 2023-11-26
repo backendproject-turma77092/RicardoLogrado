@@ -28,13 +28,37 @@ class CustomerController extends Controller
 
     public function show($id)
     {
-        // Logic to show a specific customer
+        $customer = Customer::find($id);
+    
+        if ($customer) {
+            return response()->json($customer);
+        } else {
+            return response()->json(['message' => 'Customer not found'], 404);
+        }
     }
+    
 
     public function update(Request $request, $id)
     {
-        // Logic to update a specific customer
+        $customer = Customer::find($id);
+    
+        if ($customer) {
+            $customer->update([
+                "CustomerID" => $request->input("CustomerID", $customer->CustomerID),
+                "name" => $request->input("name", $customer->name),
+                "phone" => $request->input("phone", $customer->phone),
+                "email" => $request->input("email", $customer->email),
+                "address" => $request->input("address", $customer->address),
+                "postal_code" => $request->input("postal_code", $customer->postal_code),
+                "NIF" => $request->input("NIF", $customer->NIF),
+            ]);
+    
+            return response()->json($customer);
+        } else {
+            return response()->json(['message' => 'Customer not found'], 404);
+        }
     }
+    
 
 }
 

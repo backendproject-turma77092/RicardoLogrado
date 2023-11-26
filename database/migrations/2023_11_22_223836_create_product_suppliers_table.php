@@ -8,12 +8,6 @@ return new class extends Migration
 {
     public function up(): void
     {
-        // Schema::dropIfExists('product_supplier');
-        // Schema::create('product_supplier', function (Blueprint $table) {
-        //     $table->foreignId('ProductID')->constrained('products');
-        //     $table->foreignId('SupplierID')->constrained('suppliers');
-        //     $table->timestamps();
-        // });
         Schema::dropIfExists('product_supplier');
         Schema::create('product_supplier', function (Blueprint $table) {
             $table->foreignId('product_id')->constrained();

@@ -49,7 +49,4 @@ class ProductController extends Controller
 
         return response()->json($product->load('suppliers'));
     }
-
-
-
 }
