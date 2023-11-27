@@ -2,13 +2,8 @@
 
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\OrderController;
-use App\Http\Controllers\OrderDetailsController;
-use App\Http\Controllers\OrdersController;
 use App\Http\Controllers\ProductController;
-use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\SupplierController;
-use App\Http\Controllers\SuppliersController;
-use App\Models\OrderDetails;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -43,5 +38,5 @@ Route::put("product/{id}",[ProductController::class,"update"]);
 //suppliers route
 Route::get("supplier",[SupplierController::class,"index"]);
 Route::post("supplier",[SupplierController::class,"create"]);
-Route::put("supplier/{id}",[SupplierController::class,"update"]);
 Route::get("supplier/{id}",[SupplierController::class,"show"]);
+Route::put("supplier/{id}",[SupplierController::class,"update"]);

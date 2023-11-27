@@ -8,6 +8,7 @@ return new class extends Migration
 {
     public function up(): void
     {
+        Schema::dropIfExists('order_products');
         Schema::create('order_products', function (Blueprint $table) {
             $table->foreignId('OrderID')->constrained('orders');
             $table->foreignId('ProductID')->constrained('products');
