@@ -17,6 +17,10 @@
 <p>Antes de criar o seu primeiro projeto Laravel, certifique-se de que a máquina local tem o PHP e Composer instalados.
  Depois de instalar o PHP e o Composer, pode-se criar um novo projeto Laravel através do comando create-project do Composer:</p>
 
+## Schema:
+
+<img src="./public/assets/img/Schema-Backend-Project.png" alt="Schema">
+
 ## Instalação:
 
 <a href="https://laravel.com/docs/10.x/installation" target="_blank" rel="">Clica aqui para ver o manual de installação do Laravel.</a>
@@ -133,9 +137,4 @@
 <p>É preciso um trabalho continuo, basicamente diário nesta fase de aprendizagem, não só na utilização do código mas também no desenvolvimento de lógica</p>
 <p>Aprender isto aos 40 foi de longe o objectivo mais desafiante a que alguma vez me propus</p>
 
-|
-|
-|
-|
-|
 <img src="./public/assets/img/alexandre-the-great.webp" alt="Postman Collection">
