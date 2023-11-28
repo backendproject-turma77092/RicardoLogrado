@@ -132,3 +132,10 @@
 
 <p>É preciso um trabalho continuo, basicamente diário nesta fase de aprendizagem, não só na utilização do código mas também no desenvolvimento de lógica</p>
 <p>Aprender isto aos 40 foi de longe o objectivo mais desafiante a que alguma vez me propus</p>
+
+|
+|
+|
+|
+|
+<img src="./public/assets/img/alexandre-the-great.webp" alt="Postman Collection">
