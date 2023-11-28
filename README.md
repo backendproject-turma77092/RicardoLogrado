@@ -30,7 +30,7 @@
 </p>
 <p>Depois de iniciar o servidor de desenvolvimento Artisan, seu aplicativo estará acessível no seu navegador em <strong><a href="http://localhost:8000" target="_blank">http://localhost:8000</a></strong>. A seguir, você está pronto para começar a dar os próximos passos no ecossistema Laravel. Claro, você também pode querer configurar um banco de dados.</p>
 
-##Utilização:
+## Utilização:
 
 <p>Podem encontrar o export do Postamn na pasta <span>.public\assets\Postman-Export</span></p>
 
