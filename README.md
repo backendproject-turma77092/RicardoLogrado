@@ -51,7 +51,7 @@
 
 <p>Dentro dos controladores foi utilizado o CRUD onde temos o Create Read Update mas não o Delete, que foi excluido de forma a simplificar o projecto.</p>
 
-!-- <p>Temos então o show all que é feito através do index</p> -->
+<p>Temos então o show all que é feito através do index</p>
 <img src="./public/assets/img/index.png" alt="Controller index">
 
 <p>Recorrendo ao model, conseguimos obter todos os dados referentes a essa tabela.</p>
@@ -84,6 +84,7 @@
     "NIF":"321321321"
   }
 </p>
+<img src="./public/assets/img/postman-collection-suppliers.png" alt="Postman Collection">
 <p>Depois Products, sendo que os products pode pertencer a 1 ou a vários suppliers:</p>
 <p>{
     "brand":"Apple",
@@ -97,9 +98,9 @@
     "supplier_ids": [1,2]
   }
 </p>
+<img src="./public/assets/img/postman-collection-products.png" alt="Postman Collection">
 <p>E finalmente podemos criar uma Order, que pode conter vários Products e, que vai também somar o valor total não só dos diferentes items adicionados, mas também o numero de vezes que um item especifico foi adicionado á Order:</p>
 <p>
-```json
 {
     "postal_code": "4444-123",
     "order_date": "2023-11-20",
@@ -116,6 +117,7 @@
     ]
   }
 </p>
+<img src="./public/assets/img/postman-collection-orders.png" alt="Postman Collection">
 
 ## Dificuldades:
 
