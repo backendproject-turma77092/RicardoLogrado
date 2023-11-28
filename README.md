@@ -80,29 +80,30 @@
 <img src="./public/assets/img/postman-collection.png" alt="Postman Collection">
 <p>Depois das rotas criadas podemos avançar com os testes das Orders</p>
 <p>Por ordem devemos primeiro criar Suppliers:</p>
-<code>{<br/>
-        &emsp;"company_name":"Worten",<br/>
-        &emsp;"phone":"911234567",<br/>
-        &emsp;"email":"worten@gmail.com",<br/>
-        &emsp;"address":"Almada",<br/>
-        &emsp;"postal_code":"2805",<br/>
-        &emsp;"type":"Electronics",<br/>
-        &emsp;"NIF":"321321321"<br/>
+<code>
+      {
+        "company_name":"Worten",
+        "phone":"911234567",
+        "email":"worten@gmail.com",
+        "address":"Almada",
+        "postal_code":"2805",
+        "type":"Electronics",
+        "NIF":"321321321"
       }
 </code><br/>
 <img src="./public/assets/img/postman-collection-suppliers.png" alt="Postman Collection">
 <p>Depois Products, sendo que os products pode pertencer a 1 ou a vários suppliers:</p>
 <code>
-  {<br/>
-    &emsp;"brand":"Apple",<br/>
-    &emsp;"model":"Macbook Air",<br/>
-    &emsp;"serial_number":"1234512345",<br/>
-    &emsp;"type":"Electronics",<br/>
-    &emsp;"unit_price":"1200",<br/>
-    &emsp;"units_in_stock":"200",<br/>
-    &emsp;"units_on_order":"5",<br/>
-    &emsp;"discontinued":"No",<br/>
-    &emsp;"supplier_ids": [1,2]<br/>
+  {
+    "brand":"Apple",
+    "model":"Macbook Air",
+    "serial_number":"1234512345",
+    "type":"Electronics",
+    "unit_price":"1200",
+    "units_in_stock":"200",
+    "units_on_order":"5",
+    "discontinued":"No",
+    "supplier_ids": [1,2]
   }
 </code><br/>
 <img src="./public/assets/img/postman-collection-products.png" alt="Postman Collection">
