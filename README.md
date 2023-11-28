@@ -84,8 +84,9 @@
     "NIF":"321321321"
   }
 </p>
-<p>Depois Products, sendo que os products pode pertencer 1 ou a vários suppliers:</p>
-<p>{
+<img src="./public/assets/img/postman-collection.png" alt="Postman Collection">
+<p>Depois Products, sendo que os products pode pertencer a 1 ou a vários suppliers:</p>
+<div>{
     "brand":"Apple",
     "model":"Macbook Air",
     "serial_number":"1234512345",
@@ -96,7 +97,7 @@
     "discontinued":"No",
     "supplier_ids": [1,2]
   }
-</p>
+</div>
 <p>E finalmente podemos criar uma Order, que pode conter vários Products e, que vai também somar o valor total não só dos diferentes items adicionados, mas também o numero de vezes que um item especifico foi adicionado á Order:</p>
 <p>{
     "postal_code": "4444-123",
