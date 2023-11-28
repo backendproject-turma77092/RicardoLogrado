@@ -32,7 +32,7 @@
 
 ## Utilização:
 
-<p>Podem encontrar o export do Postamn na pasta <span>.public\assets\Postman-Export</span></p>
+<p>Podem encontrar o export do Postamn na pasta <span class="highlight">.public\assets\Postman-Export</span></p>
 
 <p>Como muitos dos valores das opções de configuração do Laravel podem variar dependendo se sua aplicação está sendo executada em sua máquina local ou em um servidor web de produção, muitos valores de configuração importantes são definidos usando o arquivo <strong>.env</strong> que existe na raiz da sua aplicação .</p>
 
