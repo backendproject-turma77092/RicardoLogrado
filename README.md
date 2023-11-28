@@ -81,13 +81,13 @@
 <p>Depois das rotas criadas podemos avançar com os testes das Orders</p>
 <p>Por ordem devemos primeiro criar Suppliers:</p>
 <break>{<br/>
-        "company_name":"Worten",<br/>
-        "phone":"911234567",<br/>
-        "email":"worten@gmail.com",<br/>
-        "address":"Almada",<br/>
-        "postal_code":"2805",<br/>
-        "type":"Electronics",<br/>
-        "NIF":"321321321"<br/>
+        &emsp;"company_name":"Worten",<br/>
+        &emsp;"phone":"911234567",<br/>
+        &emsp;"email":"worten@gmail.com",<br/>
+        &emsp;"address":"Almada",<br/>
+        &emsp;"postal_code":"2805",<br/>
+        &emsp;"type":"Electronics",<br/>
+        &emsp;"NIF":"321321321"<br/>
       }
 </break>
 <img src="./public/assets/img/postman-collection-suppliers.png" alt="Postman Collection">
