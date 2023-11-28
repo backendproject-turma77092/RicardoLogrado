@@ -122,13 +122,13 @@
 ## Dificuldades:
 
 <p>Não foi um projecto fácil de executar, e mesmo após muitas dificuldades, o projecto não está a 100%</p>
-<p>Inicialmente compliquei bastante na altura de desenhar o schema pois, wu tendo a visualizar o produto final e não o caminho que leva lá.</p>
+<p>Inicialmente compliquei bastante na altura de desenhar o schema pois tendo a visualizar o produto final e não o caminho que leva lá.</p>
 <p>Com o Auxilio dos meus colegas, pouco a pouco tenho vindo a entender melhor o que é a lógica do código.</p>
 <p>O Alexandre também me instigou bastante a dar o melhor de mim e a ver as coisas como elas devem ser vistas, que é, uma coisa de cada vez, partidas em segmentos pequenos que pouco a pouco, quando unidos, se vão tornando em segmentos maiores até que finalmente se chega ao panorama maior.</p>
-<p>Durante o processo de criação, fiz migrações , refresh, e restes incontáveis e, pelo meio deparei-me com o facto de uma migração aparecer como já existente, logo, não podia ser migrada novamente. a solução prendeu-se com a adição de <img src="./public/assets/img/drop-if-exists.png" alt="drop-if-exists"> no "UP" da migração</p>
+<p>Durante o processo de criação, fiz migrações , refresh, e resets incontáveis e, pelo meio deparei-me com o facto de uma migração aparecer como já existente, logo, não podia ser migrada novamente. a solução prendeu-se com a adição de <img src="./public/assets/img/drop-if-exists.png" alt="drop-if-exists"> no "UP" da migração.</p>
 <p>Apenas hoje, 4 dias depois, descobri que o erro afinal era uma outra migração com o mesmo nome que eu tinha criado sem dar conta. De qualquer forma, agora toadas as migrações deste projecto têm um "drop-if-exists" no "UP"</p>
 
 ## Conclusões:
 
 <p>É preciso um trabalho continuo, basicamente diário nesta fase de aprendizagem, não só na utilização do código mas também no desenvolvimento de lógica</p>
-<p>Aprender isto aos 40 foi de longe o objectivo mais desafiante a que alguma vez me propuz</p>
+<p>Aprender isto aos 40 foi de longe o objectivo mais desafiante a que alguma vez me propus</p>
