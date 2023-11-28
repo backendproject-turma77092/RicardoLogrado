@@ -107,20 +107,20 @@
 <img src="./public/assets/img/postman-collection-products.png" alt="Postman Collection">
 <p>E finalmente podemos criar uma Order, que pode conter vários Products e, que vai também somar o valor total não só dos diferentes items adicionados, mas também o numero de vezes que um item especifico foi adicionado á Order:</p>
 <code>
-{<br/>
-    &emsp;"postal_code": "4444-123",<br/>
-    &emsp;"order_date": "2023-11-20",<br/>
-    &emsp;"shipped_date": "2023-11-22",<br/>
-    &emsp;"products": [<br/>
-        &emsp;&emsp;{<br/>
-            &emsp;&emsp;&emsp;"ProductID": 2,<br/>
-            &emsp;&emsp;&emsp;"quantity": 1<br/>
-        &emsp;&emsp;},<br/>
-        &emsp;&emsp;{<br/>
-            &emsp;&emsp;&emsp;"ProductID": 3,<br/>
-            &emsp;&emsp;&emsp;"quantity": 1<br/>
-        &emsp;&emsp;}<br/>
-    &emsp;]<br/>
+  {
+    &emsp;"postal_code": "4444-123",
+    &emsp;"order_date": "2023-11-20",
+    &emsp;"shipped_date": "2023-11-22",
+    &emsp;"products": [
+        &emsp;&emsp;{
+            &emsp;&emsp;&emsp;"ProductID": 2,
+            &emsp;&emsp;&emsp;"quantity": 1
+        &emsp;&emsp;},
+        &emsp;&emsp;{
+            &emsp;&emsp;&emsp;"ProductID": 3,
+            &emsp;&emsp;&emsp;"quantity": 1
+        &emsp;&emsp;}
+    &emsp;]
   }
 </code><br/>
 <img src="./public/assets/img/postman-collection-orders.png" alt="Postman Collection">
