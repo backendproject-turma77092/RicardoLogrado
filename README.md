@@ -49,18 +49,15 @@
 <p>As rotas estão todas no ficheiro api.php:</p>
 <img src="./public/assets/img/rotas.png" alt="Routes">
 
-<p>Dentro dos controladores foi utilizado o CRUD onde temos o Create Read Update e Delete, no meu caso chamei store, show e update, o destoy não foi incluido nos projecto, visto que o id auto-incrementa não existe essa necessidade diminuindo assim a probabilidade de gerar erros na tabela ao fazer update das mesmas.</p>
+<p>Dentro dos controladores foi utilizado o CRUD onde temos o Create Read Update mas não o Delete, que foi excluido de forma a simplificar o projecto.</p>
 
-<!-- <p>Temos então o show all que é feito através do index</p>
+!-- <p>Temos então o show all que é feito através do index</p> -->
 <img src="./public/assets/img/index.png" alt="Controller index">
+
 <p>Recorrendo ao model, conseguimos obter todos os dados referentes a essa tabela.</p>
 
 <p>O store:</p>
 <img src="./public/assets/img/create-store.png" alt="Controller Store">
-<p>No store foram feitas validações onde alguns campos não podiam ficar vazios para que ao fazer o <strong>POST</strong> se pudesse gerar um novo user.</p>
-<p>foi criada também uma validação de stock para nunca haver o problema de se fazer uma encomenda na qual não existe stock diponivel</p>
-<p>Foi também criada uma validação ao tentar criar um novo produto, caso o produto já exista apenas é actulizado o stock como pdemos verificar abaixo:</p>
-<img src="./public/assets/img/product_stock_update.png" alt="Product Stock Update">
 
 <p>O update:</p>
 <img src="./public/assets/img/create-update.png" alt="Controller Update">
@@ -69,40 +66,65 @@
 
 <p>E o show by $id:</p>
 <img src="./public/assets/img/create-show.png" alt="Controller Show">
-<p>No show by $id temos então os <strong>join's</strong> de várias tabelas onde através deles conseguimos adquirir vários tipos de informação.</p>
-<p>Para o caso dos <strong>Users</strong> fez-se a ligação com a tabela <strong>Orders</strong>, com a tabela <strong>Products</strong> e a tabela <strong>Products_has_orders</strong>. Com esta ligação conseguimos retornar todas as orders feitas por este user como os products a elas associadas e respectivos dados. Na imagem abaixo podemos verificar o <strong>.Json</strong> com esses dados.</p>
-<img src="./public/assets/img/Order_by_userid.png" alt="Order by userid">
-
-## Como iniciar:
-<p>Para o projecto devemos em primeiro lugar correr a seguinte migração:</p>
-<img src="./public/assets/img/first_migration.png" alt="First Migration">
-
-<p>Depois de correr a migração Warehouse_table, podemos correr todas as outras através do comando:</p>
-<img src="./public/assets/img/rest_migration.png" alt="Other tables">
-<p>como resultado obtemos esta resposta no terminal:</p>
-<img src="./public/assets/img/migration_result.png" alt="Migration Result">
 
 ## Como testar:
+
 <p>Para testar a aplicação foi utilizado o <strong><a href="https://www.postman.com/" target="_blank">https://www.postman.com/</a></strong></p>
-<p>Em primeiro lugar devemos começar por criar as rotas de <strong>Supplier</strong> como na imagem abaixo:</p>
+<p>Em primeiro lugar devemos começar por criar as rotas como na imagem abaixo:</p>
 <img src="./public/assets/img/postman-collection.png" alt="Postman Collection">
-<p>Depois temos de criar em primeiro lugar o supplier.</p>
-<img src="./public/assets/img/postman-first.png" alt="First Creation Supplier">
-<p>Através da seguinte rota:</p>
-<img src="./public/assets/img/postman-route.png" alt="Postman-route">
-<p>No body do <strong>POST</strong> temos de colocar:</p>
-<img src="./public/assets/img/postman-body.png" alt="Postman body">
-<p>Caso o <strong>Supplier</strong> seja bem inserido iremos receber uma mensagem de sucesso. Caso o <strong>Supplier</strong> já exista será retornado uma mensagem de erro.</p>
-<p>O mesmo processo terá de ser aplicado para todas as outras rotas.</p>
-<p>Teremos de preencher o body no <strong>Postman</strong> com os parametros obrigatórios para podermos ir preenchendo as tabelas.</p>
+<p>Depois das rotas criadas podemos avançar com os testes das Orders</p>
+<p>Por ordem devemos primeiro criar Suppliers:</p>
+<p>{
+    "company_name":"Worten",
+    "phone":"911234567",
+    "email":"worten@gmail.com",
+    "address":"Almada",
+    "postal_code":"2805",
+    "type":"Electronics",
+    "NIF":"321321321"
+  }
+</p>
+<p>Depois Products, sendo que os products pode pertencer 1 ou a vários suppliers:</p>
+<p>{
+    "brand":"Apple",
+    "model":"Macbook Air",
+    "serial_number":"1234512345",
+    "type":"Electronics",
+    "unit_price":"1200",
+    "units_in_stock":"200",
+    "units_on_order":"5",
+    "discontinued":"No",
+    "supplier_ids": [1,2]
+  }
+</p>
+<p>E finalmente podemos criar uma Order, que pode conter vários Products e, que vai também somar o valor total não só dos diferentes items adicionados, mas também o numero de vezes que um item especifico foi adicionado á Order:</p>
+<p>{
+    "postal_code": "4444-123",
+    "order_date": "2023-11-20",
+    "shipped_date": "2023-11-22",
+    "products": [
+        {
+            "ProductID": 2,
+            "quantity": 1
+        },
+        {
+            "ProductID": 3,
+            "quantity": 1
+        }
+    ]
+  }
+</p>
 
 ## Dificuldades:
-<p>A certo poonto tive de refazer todo o meu projeto por estar a exigir demasiado de mim próprio. Nessa altura decidi parar e falar com os meus colegas (porque eu não vejo o curso como uma competição de notas, mas sim como um grupo de trabalho que gostava bastante que nos podesse-mos apoiar uns aos outros mutuamente) e mais tarde falei com o Alexandre sobre o reinicio.</p>
-<p>Nessa altura decidi simplificar o meu projeto tornando-o mais simples, o que correu bastante bem.</p>
-<p>Penso que consegui cumprir praticamente todos os requisitos solicitados, no entanto tive dificuldades ao fazer os joins entre tabelas e de obter alguns resultados onde eu desejava.</p>
-<p>Com o auxilio do Alexandre consegui perceber a lógica e implementar os joins de forma a que tudo ficasse a funcionar como pertendido.</p>
-<p>Fiquei com um problema se é que assim o posso dizer, quando crio a order, tenho sempre de correr a order pelo id para atualizar o valor total, tentei colocar as linhas de código noutras partes do controlador mas sem sucesso. No entanto para um layout funcional, ao entrar numa order o valor estaria atualizado. </p>
+
+<p>Não foi um projecto fácil de executar, e mesmo após muitas dificuldades, o projecto não está a 100%</p>
+<p>Inicialmente compliquei bastante na altura de desenhar o schema pois, wu tendo a visualizar o produto final e não o caminho que leva lá.</p>
+<p>Com o Auxilio dos meus colegas, pouco a pouco tenho vindo a entender melhor o que é a lógica do código.</p>
+<p>O Alexandre também me instigou bastante a dar o melhor de mim e a ver as coisas como elas devem ser vistas, que é, uma coisa de cada vez, partidas em segmentos pequenos que pouco a pouco, quando unidos, se vão tornando em segmentos maiores até que finalmente se chega ao panorama maior.</p>
+<p>Durante o processo de criação, fiz migrações , refresh, e restes incontáveis e, pelo meio deparei-me com o facto de uma migração aparecer como já existente, logo, não podia ser migrada novamente. a solução prendeu-se com a adição de <img src="./public/assets/img/drop-if-exists.png" alt="drop-if-exists"> no "UP" da migração</p>
+<p>Apenas hoje, 4 dias depois, descobri que o erro afinal era uma outra migração com o mesmo nome que eu tinha criado sem dar conta. De qualquer forma, agora toadas as migrações deste projecto têm um "drop-if-exists" no "UP"</p>
 
 ## Conclusões:
-<p>Nas conclusões, tiro que com alguma paciência consegui chegar a bom porto.</p>
-<p>Foi um projeto bastante desafiante ao qual estou bastante satisfeito de chegar aos resultados obtidos.</p> -->
+
+<p>É preciso um trabalho continuo, basicamente diário nesta fase de aprendizagem, não só na utilização do código mas também no desenvolvimento de lógica</p>
+<p>Aprender isto aos 40 foi de longe o objectivo mais desafiante a que alguma vez me propuz</p>
