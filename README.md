@@ -80,7 +80,7 @@
 <img src="./public/assets/img/postman-collection.png" alt="Postman Collection">
 <p>Depois das rotas criadas podemos avançar com os testes das Orders</p>
 <p>Por ordem devemos primeiro criar Suppliers:</p>
-<break>{<br/>
+<code>{<br/>
         &emsp;"company_name":"Worten",<br/>
         &emsp;"phone":"911234567",<br/>
         &emsp;"email":"worten@gmail.com",<br/>
@@ -89,10 +89,10 @@
         &emsp;"type":"Electronics",<br/>
         &emsp;"NIF":"321321321"<br/>
       }
-</break>
+</code><br/>
 <img src="./public/assets/img/postman-collection-suppliers.png" alt="Postman Collection">
 <p>Depois Products, sendo que os products pode pertencer a 1 ou a vários suppliers:</p>
-<break>{<br/>
+<code>{<br/>
     &emsp;"brand":"Apple",<br/>
     &emsp;"model":"Macbook Air",<br/>
     &emsp;"serial_number":"1234512345",<br/>
@@ -103,10 +103,10 @@
     &emsp;"discontinued":"No",<br/>
     &emsp;"supplier_ids": [1,2]<br/>
   }
-</break>
+</code><br/>
 <img src="./public/assets/img/postman-collection-products.png" alt="Postman Collection">
 <p>E finalmente podemos criar uma Order, que pode conter vários Products e, que vai também somar o valor total não só dos diferentes items adicionados, mas também o numero de vezes que um item especifico foi adicionado á Order:</p>
-<break>
+<code>
 {<br/>
     &emsp;"postal_code": "4444-123",<br/>
     &emsp;"order_date": "2023-11-20",<br/>
@@ -122,7 +122,7 @@
         &emsp;&emsp;}<br/>
     &emsp;]<br/>
   }
-</break>
+</code><br/>
 <img src="./public/assets/img/postman-collection-orders.png" alt="Postman Collection">
 
 ## Dificuldades:
