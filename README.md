@@ -32,6 +32,8 @@
 
 ##Utilização:
 
+<p>Podem encontrar o export do Postamn na pasta <span>.public\assets\Postman-Export</span></p>
+
 <p>Como muitos dos valores das opções de configuração do Laravel podem variar dependendo se sua aplicação está sendo executada em sua máquina local ou em um servidor web de produção, muitos valores de configuração importantes são definidos usando o arquivo <strong>.env</strong> que existe na raiz da sua aplicação .</p>
 
 <p>Seu arquivo <strong>.env</strong> não deve ser submetido ao controle de origem do seu aplicativo, pois cada desenvolvedor/servidor que usa seu aplicativo pode exigir uma configuração de ambiente diferente. Além disso, isso seria um risco de segurança caso um intruso obtivesse acesso ao seu repositório de controle de origem, uma vez que quaisquer credenciais confidenciais seriam expostas.</p>
