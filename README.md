@@ -92,37 +92,37 @@
 </break>
 <img src="./public/assets/img/postman-collection-suppliers.png" alt="Postman Collection">
 <p>Depois Products, sendo que os products pode pertencer a 1 ou a vários suppliers:</p>
-<p>{
-    "brand":"Apple",
-    "model":"Macbook Air",
-    "serial_number":"1234512345",
-    "type":"Electronics",
-    "unit_price":"1200",
-    "units_in_stock":"200",
-    "units_on_order":"5",
-    "discontinued":"No",
-    "supplier_ids": [1,2]
+<break>{<br/>
+    "brand":"Apple",<br/>
+    "model":"Macbook Air",<br/>
+    "serial_number":"1234512345",<br/>
+    "type":"Electronics",<br/>
+    "unit_price":"1200",<br/>
+    "units_in_stock":"200",<br/>
+    "units_on_order":"5",<br/>
+    "discontinued":"No",<br/>
+    "supplier_ids": [1,2]<br/>
   }
-</p>
+</break>
 <img src="./public/assets/img/postman-collection-products.png" alt="Postman Collection">
 <p>E finalmente podemos criar uma Order, que pode conter vários Products e, que vai também somar o valor total não só dos diferentes items adicionados, mas também o numero de vezes que um item especifico foi adicionado á Order:</p>
-<p>
-{
-    "postal_code": "4444-123",
-    "order_date": "2023-11-20",
-    "shipped_date": "2023-11-22",
-    "products": [
-        {
-            "ProductID": 2,
-            "quantity": 1
-        },
-        {
-            "ProductID": 3,
-            "quantity": 1
-        }
-    ]
+<break>
+{<br/>
+    "postal_code": "4444-123",<br/>
+    "order_date": "2023-11-20",<br/>
+    "shipped_date": "2023-11-22",<br/>
+    "products": [<br/>
+        {<br/>
+            "ProductID": 2,<br/>
+            "quantity": 1<br/>
+        },<br/>
+        {<br/>
+            "ProductID": 3,<br/>
+            "quantity": 1<br/>
+        }<br/>
+    ]<br/>
   }
-</p>
+</break>
 <img src="./public/assets/img/postman-collection-orders.png" alt="Postman Collection">
 
 ## Dificuldades:
